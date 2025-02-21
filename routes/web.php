@@ -34,3 +34,15 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/hello/hello2/hellolagi', function () {
 //     echo "Hello Word";
 // });
+
+Route::get('mahasiswa',function (){
+    $kelas = "IS63";
+    $data = ["Herdio","Rani","Putri","Erik"];
+
+    //with untuk mengubah nama
+    // return view('mahasiswa.index')->with('mhs',$data) ->with ('kls',$kelas);
+    
+    //compact untuk memanggil langsung variabel nya
+    return view ('mahasiswa.index',compact('kelas','data'));
+});
+
