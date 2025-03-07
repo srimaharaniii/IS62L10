@@ -35,14 +35,22 @@ use Illuminate\Support\Facades\Route;
 //     echo "Hello Word";
 // });
 
-Route::get('mahasiswa',function (){
-    $kelas = "IS63";
-    $data = ["Herdio","Rani","Putri","Erik"];
+// Route::get('mahasiswa',function (){
+//     $kelas = "IS63";
+//     $data = ["Herdio","Rani","Putri","Erik"];
 
-    //with untuk mengubah nama
-    // return view('mahasiswa.index')->with('mhs',$data) ->with ('kls',$kelas);
-    
-    //compact untuk memanggil langsung variabel nya
-    return view ('mahasiswa.index',compact('kelas','data'));
+//with untuk mengubah nama
+// return view('mahasiswa.index')->with('mhs',$data) ->with ('kls',$kelas);
+
+//compact untuk memanggil langsung variabel nya
+//     return view ('mahasiswa.index',compact('kelas','data'));
+// });
+
+Route::get('/mahasiswa', function () {
+    $nama = "Sri Maharani";
+    $nilai = 20;
+
+    $nilai2 = [40, 70, 35, 65, 100];
+
+    return view('mahasiswa', compact('nama', 'nilai', 'nilai2'));
 });
-
