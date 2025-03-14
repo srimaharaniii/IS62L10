@@ -46,11 +46,26 @@ use Illuminate\Support\Facades\Route;
 //     return view ('mahasiswa.index',compact('kelas','data'));
 // });
 
+// Route::get('/mahasiswa', function () {
+//     $nama = "Sri Maharani";
+//     $nilai = 20;
+
+//     $nilai2 = [40, 70, 35, 65, 100];
+
+//     return view('mahasiswa', compact('nama', 'nilai', 'nilai2'));
+// });
+
 Route::get('/mahasiswa', function () {
-    $nama = "Sri Maharani";
-    $nilai = 20;
-
-    $nilai2 = [40, 70, 35, 65, 100];
-
-    return view('mahasiswa', compact('nama', 'nilai', 'nilai2'));
+    $data_mhs = ["abdul","aidil","alif","asfal"];
+    return view('layout.mahasiswa', compact('data_mhs'));
 });
+
+Route::get('/dosen', function () {
+    $data_dos = ["ismanudin","mustofa","Dzulgunar","maulian"];
+    return view('layout.dosen', compact('data_dos'));
+});
+
+Route::get('/galeri', function () {
+    return view('layout.galeri');
+});
+
