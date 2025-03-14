@@ -57,15 +57,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/mahasiswa', function () {
     $data_mhs = ["abdul","aidil","alif","asfal"];
-    return view('layout.mahasiswa', compact('data_mhs'));
+    return view('layout.master', compact('data_mhs'));
+});
+
+Route::get('/mahasiswa', function () {
+    $data_mhs = ["abdul","aidil","alif","asfal"];
+    return view('data.mahasiswa', compact('data_mhs'));
 });
 
 Route::get('/dosen', function () {
     $data_dos = ["ismanudin","mustofa","Dzulgunar","maulian"];
-    return view('layout.dosen', compact('data_dos'));
+    return view('data.dosen', compact('data_dos'));
 });
 
 Route::get('/galeri', function () {
-    return view('layout.galeri');
+    return view('data.galeri');
 });
 
