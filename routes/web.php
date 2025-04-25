@@ -55,7 +55,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('mahasiswa', compact('nama', 'nilai', 'nilai2'));
 // });
 
-Route::get('/mahasiswa', function () {
+Route::get('/master', function () {
     $data_mhs = ["abdul","aidil","alif","asfal"];
     return view('layout.master', compact('data_mhs'));
 });
@@ -73,4 +73,3 @@ Route::get('/dosen', function () {
 Route::get('/galeri', function () {
     return view('data.galeri');
 });
-
