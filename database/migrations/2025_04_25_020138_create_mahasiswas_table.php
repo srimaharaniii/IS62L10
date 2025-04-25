@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('mahasiswas', function (Blueprint $table) {
             $table->id();
+            $table->string('nim')->unique();
+            $table->string('nama',100);
+            $table->string('tempat_lahir',100);
+            $table->date('tanggal_lahir');
+            $table->bigInteger('dosens_id');
+            $table->enum('jk', ['laki-laki', 'perempuan']);
+            $table->string('foto')->nullable();
             $table->timestamps();
         });
     }
