@@ -11,7 +11,8 @@
                 <div class="card-body">
 
                     <div class="card-body">
-                        <form action="index.blade.php" method="post">
+                        <form action="/dosen" method="post" enctype="multipart/form-data">
+                            @csrf
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">NIDN</label>
                                 <input type="text" name="nidn" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -21,12 +22,17 @@
                                 <input type="text" name="nama" class="form-control" id="exampleInputPassword1">
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Jabatan</label>
-                                <select name="jabatan" class="form-control" id="">
-                                    <option value="">-Pilih Jabatan-</option>
-                                    <option value="Full Time">Full Time</option>
-                                    <option value="Part Time">Part Time</option>
-                                </select>
+                                <label for="exampleInputPassword1" class="form-label">Rumpun</label>
+                                <select name="rumpun" id="" class="form-control">
+                                <option value="">-Pilih Rumpun-</option>
+                                <option value="Komputer">Komputer</option>
+                                <option value="Bisnis">Bisnis</option>
+                                <option value="Sekretaris">Sekretaris</option>
+                                <option value="Akuntansi">Akuntansi</option>
+                                <option value="Manajemen">Manajemen</option>
+                                <option value="Wirausaha">Wirausaha</option>
+                                <option value="Marketing">Marketing</option>
+                            </select>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Email</label>
@@ -37,11 +43,10 @@
                                 <input type="text" name="no_hp" class="form-control" id="exampleInputPassword1">
                             </div>
 
-                            <a href="dosen"><button type="button" class="btn btn-primary float-end">submit</button></a>
+                            <button type="submit" class="btn btn-primary float-end">submit</button>
                         </form>
                         </div>
 
-                    {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>
